@@ -142,7 +142,7 @@ Sub Main
    ' Can do this heuristically?
    CS.GetFixedField "Type", sType 
    CS.GetFixedField "BLvl", sBLvl
-   CS.GetFixedField "FMus", sFMus 
+   CS.GetFixedField "Form", sForm
    If sType = "a" And (sForm = "" Or (sForm = "r" Or sForm="d")) Then
        'tangible book
        s336 = "336  text ß2 rdacontent"
