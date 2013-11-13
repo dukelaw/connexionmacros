@@ -49,12 +49,12 @@ Sub Main
    CS.GetField "040", 1, s040
    If InStr(s040, "ßc") = False Then
        MsgBox "There is no subfield c in the 040"
-   ElseIf InStr(s040, "ßb eng ße rda") >= 0 Then
+   ElseIf InStr(s040, "ßb eng ße rda") > 0 Then
        MsgBox "This record already has a $b $e"
    Else
-       If InStr(s040, "ße rda") >= 0 Then
+       If InStr(s040, "ße rda") > 0 Then
            FixStr s040, "ße", "ßb eng ße", 0, 0
-       ElseIf InStr(s040, "ßb eng") >= 0 Then
+       ElseIf InStr(s040, "ßb eng") > 0 Then
            FixStr s040, "ßc", "ßb rda ßc", 0, 0
        Else
            FixStr s040, "ßc", "ßb eng ße rda ßc", 0, 0
