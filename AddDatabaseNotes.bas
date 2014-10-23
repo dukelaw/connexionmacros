@@ -102,18 +102,18 @@ Sub Main
                 CS.AddField 99, "542  ßn Copyright restrictions may apply. See Subscription Agreement for permissible uses."
                 CS.AddField 99, "500  Contact Law Library Reference <ref@law.duke.edu> for assistance with this resource. ß5 NcD-L"
             Case 5 ' Database
-                CS.AddField 99, "655 7Online databases.ß2 lcgft"
+                CS.AddField 99, "655 0Online databases."
                 CS.SetFixedField "Form", "o"
                 CS.SetFixedField "SrTp", "d"
             Case 6 ' Websites
-                CS.AddField 99, "655 7Websites.ß2 lcgft"
+                CS.AddField 99, "655 0Websites."
                 CS.SetFixedField "Form", "o"
                 CS.SetFixedField "SrTp", "w"
             Case 7 ' Ebooks
-                CS.AddField 99, "655 7Electronic books.ß2 lcgft"
+                CS.AddField 99, "655 0Electronic books."
                 CS.SetFixedField "Form", "o"
             Case 8 ' Ejournals
-                CS.AddField 99, "655 7Electronic journals.ß2 lcgft"
+                CS.AddField 99, "655 0Electronic journals."
                 CS.SetFixedField "Form", "o"
         End Select
 

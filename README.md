@@ -2,7 +2,7 @@
 Some macros for OCLC Connexion. Use the mbk file in your Connexion\Macros
 directory. The .BAS files are for browsing.
 
-## Install to OCLC Connexion 2.40 
+## Install to OCLC Connexion 2.51 or 2.50
 
 To install copy the macrobook (.mbk file) you want to install to the
 `C:\Program Files (x86)\OCLC\Connexion\Program\Macros`
