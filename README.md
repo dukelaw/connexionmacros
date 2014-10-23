@@ -32,6 +32,7 @@ Converts an existing record into a PCC RDA record using the following steps:
   7. Update fixed fields to reflect:
      * Elvl: blankc
      * Srce: 
+
 ### ConvertToRDACore
 Converts an existing record into a Core RDA record using the following steps:
 
@@ -51,7 +52,14 @@ Converts an existing record into a Core RDA record using the following steps:
      * Elvl: 4
      * Srce: d
      * Desc: i
-     
+
+### Add RDA Encoding
+Adds 040 $b, $e LDR/18 (Descriptive Cataloging Form) to a Bibliographic
+Record. 040 $b, $e LDR/18
+
+### Add Database Notes
+Add local database notes to a record (NDL specific)
+
 #### TODO
 * Relator terms for access points.
 * Additional content carrier media type identification.
