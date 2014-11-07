@@ -46,28 +46,24 @@ Function DateString() As String
     DateString = sDateStr
 End Function
 
-Function SortString(InputString$) As String
-    Dim i%, Switched%, InputLen%
-    Dim FirstChar$, SecondChar$
-    If InputString$ <> "" Then
-        InputLen% = Len( InputString$ )
-        If InputLen% > 0 Then
-            Switched = TRUE
-            Do
-              For i = 1 To InputLen% - 1
-                FirstChar$  = Mid$( InputString$, i, 1 )
-                SecondChar$ = Mid$( InputString$, i + 1, 1 )
-                If FirstChar$ > SecondChar$ Then
-                    Mid$( InputString$, i, 1 ) = SecondChar$
-                    Mid$( InputString$, i  + 1, 1 ) = FirstChar$
-                    Switched = TRUE
-                  Else
-                    Switched = FALSE
+Function SortString(sInputString$) As String
+    Dim i%, nInputLen%
+    Dim sFirstChar$, sSecondChar$
+    If sInputString$ <> "" Then
+        nInputLen = Len(sInputString)
+        If nInputLen > 1 Then
+            Do Until i = nInputLen
+              For i = 1 To nInputLen - 1
+                sFirstChar  = Mid$(sInputString, i, 1)
+                sSecondChar = Mid$(sInputString, i + 1, 1)
+                If sFirstChar > sSecondChar Then
+                    Mid(sInputString, i, 1) = sSecondChar
+                    Mid(sInputString, i  + 1, 1) = sFirstChar
                 End If
               Next i
-            Loop Until ( Switched = FALSE And i = InputLen% )
+            Loop 
         End If
-    SortString = InputString
+    SortString = sInputString
     End If
 End Function
 
@@ -96,7 +92,7 @@ Sub Main
         Dim sCont$
         Dim sMenu() As String
         ' Define menu
-        ReDim sMenu(13)
+        ReDim sMenu(12)
         sMenu(0) = "504 Includes bibliographical references."
         sMenu(1) = "504 Includes bibliographical references (pages <page-span>)."
         sMenu(2) = "504 Includes bibliographical references and index."
