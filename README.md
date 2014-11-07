@@ -73,30 +73,30 @@ Converts an existing record into a Core RDA record using the following steps:
 ### Add Database Notes
 Add local database notes to a record (NDL specific)
 
-  * 006/007"
-  * Campus Wide"
-  * Law School Community"
-  * Password Access"
-  * Free Database"
-  * Database Format"
-  * Website Format"
-  * Ebooks"
-  * EJournals"
+  * 006/007
+  * Campus Wide
+  * Law School Community
+  * Password Access
+  * Free Database
+  * Database Format
+  * Website Format
+  * Ebooks
+  * EJournals
 
 
 ### Add Cataloging Notes
 
 Add bibliographic record notes from a menu:
 
-  * 504 Includes bibliographical references."
-  * 504 Includes bibliographical references (pages <page-span>)."
-  * 504 Includes bibliographical references and index."
-  * 504 Includes bibliographical references (pages <page-span>) and index."
-  * 500 Include index."
-  * 502 Dissertation (RDA 7.9.1.3)"
-  * 500 Originally presented as the author's (RDA 7.9.1.3)"
-  * 588 Title from cover (RDA 2.17.2)"
-  * 500 Revision of the author's <Title of original work> (Unstructured)"
-  * 775 $i revision of: $a <Title of original work> "
-  * 588 DBO online resource; title from PDF title page (<Provider>, viewed <Today>)'"
-  * 588 DBO print version record."
+  * 504 Includes bibliographical references.
+  * 504 Includes bibliographical references (pages <page-span>).
+  * 504 Includes bibliographical references and index.
+  * 504 Includes bibliographical references (pages <page-span>) and index.
+  * 500 Include index.
+  * 502 Dissertation (RDA 7.9.1.3)
+  * 500 Originally presented as the author's (RDA 7.9.1.3)
+  * 588 Title from cover (RDA 2.17.2)
+  * 500 Revision of the author's <Title of original work> (Unstructured)
+  * 775 $i revision of: $a <Title of original work> 
+  * 588 DBO online resource; title from PDF title page (<Provider>, viewed <Today>)'
+  * 588 DBO print version record.
