@@ -89,9 +89,9 @@ Add local database notes to a record (NDL specific)
 Add bibliographic record notes from a menu:
 
   * 504 Includes bibliographical references.
-  * 504 Includes bibliographical references (pages <page-span>).
+  * 504 Includes bibliographical references (pages \<page-span\>).
   * 504 Includes bibliographical references and index.
-  * 504 Includes bibliographical references (pages <page-span>) and index.
+  * 504 Includes bibliographical references (pages \<page-span\>) and index.
   * 500 Include index.
   * 502 Dissertation (RDA 7.9.1.3)
   * 500 Originally presented as the author's thesis (doctoral) (RDA 7.9.1.3)
