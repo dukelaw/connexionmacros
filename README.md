@@ -1,7 +1,7 @@
 # Connexion Macros
 
 Some macros for OCLC Connexion. Use the mbk file in your Connexion\Macros
-directory. The .BAS files are for browsing or for using Copy and Paste
+directory. The `.BAS` files are for browsing or for using Copy and Paste
 directly into your own local macrobook.
 
 ## Install to OCLC Connexion 2.51 or 2.50
@@ -94,9 +94,10 @@ Add bibliographic record notes from a menu:
   * 504 Includes bibliographical references (pages <page-span>) and index.
   * 500 Include index.
   * 502 Dissertation (RDA 7.9.1.3)
-  * 500 Originally presented as the author's (RDA 7.9.1.3)
+  * 500 Originally presented as the author's thesis (doctoral) (RDA 7.9.1.3)
+  * 500 Originally presented as the author's thesis (Habilation) (RDA 7.9.1.3)
   * 588 Title from cover (RDA 2.17.2)
-  * 500 Revision of the author's <Title of original work> (Unstructured)
-  * 775 $i revision of: $a <Title of original work> 
-  * 588 DBO online resource; title from PDF title page (<Provider>, viewed <Today>)'
+  * 500 Revision of the author's \<Title of original work\> (Unstructured)
+  * 775 $i revision of: $a \<Title of original work\> 
+  * 588 DBO online resource; title from PDF title page (\<Provider\>, viewed \<Today\>)'
   * 588 DBO print version record.

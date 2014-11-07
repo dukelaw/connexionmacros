@@ -2,7 +2,7 @@
 'MacroDescription: Adds general RDA style cataloging notes to a record
 '
 ' Written by Sean Chen <schen@law.duke.edu>
-' Revised: November 23, 2014
+' Revised: November 7, 2014
 '****************************************************************************************
 
 Option Explicit
@@ -96,19 +96,20 @@ Sub Main
         Dim sCont$
         Dim sMenu() As String
         ' Define menu
-        ReDim sMenu(12)
+        ReDim sMenu(13)
         sMenu(0) = "504 Includes bibliographical references."
         sMenu(1) = "504 Includes bibliographical references (pages <page-span>)."
         sMenu(2) = "504 Includes bibliographical references and index."
         sMenu(3) = "504 Includes bibliographical references (pages <page-span>) and index."
         sMenu(4) = "500 Include index."
         sMenu(5) = "502 Dissertation (RDA 7.9.1.3)"
-        sMenu(6) = "500 Originally presented as the author's (RDA 7.9.1.3)"
-        sMenu(7) = "588 Title from cover (RDA 2.17.2)"
-        sMenu(8) = "500 Revision of the author's <Title of original work> (Unstructured)"
-        sMenu(9) = "775 $i revision of: $a <Title of original work> "
-        sMenu(10) = "588 DBO online resource; title from PDF title page (<Provider>, viewed <Today>)'"
-        sMenu(11) = "588 DBO print version record."
+        sMenu(6) = "500 Originally presented as the author's thesis (doctoral) (RDA 7.9.1.3)"
+        sMenu(7) = "500 Originally presented as the author's thesis (Habilation) (RDA 7.9.1.3)"
+        sMenu(8) = "588 Title from cover (RDA 2.17.2)"
+        sMenu(9) = "500 Revision of the author's <Title of original work> (Unstructured)"
+        sMenu(10) = "775 $i revision of: $a <Title of original work> "
+        sMenu(11) = "588 DBO online resource; title from PDF title page (<Provider>, viewed <Today>)'"
+        sMenu(12) = "588 DBO print version record."
 
         ' Creates dialog
         Begin Dialog UserDialog 326, 202, "Add Cataloging Notes"
@@ -156,23 +157,26 @@ Sub Main
                 sNote = "502  ßb Ph. D. ßc <Institution heading> ßd " & sYear & "."
                 sMatch = "<Institution heading>"
                 sCont = GetUpdatedFixedField("Cont", "m", sCont)
-            Case 6 ' Originally presented
-                sNote = "500  Originally presented as the author's thesis (doctoral)--<Institution heading>, " & sYear & "."
+            Case 6 ' Originally presented doctoral
+                sNote = "500  Originally presented as the author's thesis (doctoral--<Institution heading>, " & sYear & ")."
                 sMatch = "<Institution heading>"
-            Case 7 ' Title from cover
+            Case 7 ' Habilation
+                sNote = "500  Originally presented as the author's thesis (Habilation--<Institution heading>, " & sYear & ")."
+                sMatch = "<Institution heading>"
+            Case 8 ' Title from cover
                 sNote = "588  Title from cover."
-            Case 8 ' Revision of the author's <Title of original work>
+            Case 9 ' Revision of the author's <Title of original work>
                 sNote = "500  Revision of the author's <Title of original work>"
                 sMatch = "<Title of original work>"
-            Case 9 '775 $i revision of: $a <Title of original work>
+            Case 10 '775 $i revision of: $a <Title of original work>
                 sNote = "77508<OCLC Number> "
                 sMatch = "<OCLC Number>"
                 MsgBox("Insert OCLC Number and Insert From Cited Record and then add $i Revision of: ")
-            Case 10 '588 Description based on online resource; title from  PDF title page (<Provider>, viewed Date'
+            Case 11 '588 Description based on online resource; title from  PDF title page (<Provider>, viewed Date'
                 sNote = "588  Description based on online resource; title from PDF title page (<Provider>, viewed "
                 sNote = sNote & DateString & ")."
                 sMatch = "<Provider>"
-            Case 11 '588 Description based on print version record.
+            Case 12 '588 Description based on print version record.
                 sNote = "588  Description based on print version record."
                 
         End Select
