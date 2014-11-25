@@ -6,12 +6,33 @@ directly into your own local macrobook.
 
 ## Install to OCLC Connexion 2.51 or 2.50
 
-To install copy the macrobook (.mbk file) you want to install to the
+### Copy Macrobook
+To install copy the macro book (.mbk file) you want to install to the
 `C:\Program Files (x86)\OCLC\Connexion\Program\Macros`
 
 Use the Tools > Macros > Manage (CTRL-ALT-SHIFT-G) to copy the macro to the
-whatever macrobook you are using. Map the macro to a key or to a user tool
+whatever macro book you are using. Map the macro to a key or to a user tool
 using the Keymaps menu item.
+
+### Copy and Paste from Source
+
+Alternatively copy the source directly from the `.BAS` file using the macro
+editor in Connexion.
+
+  1. Tools > Macros > Manage (CTRL-ALT-SHIFT-G)
+  2. Select a local macro book
+  3. Click the *New Macro* button
+  4. Enter in a description
+  5. Click *OK*
+  6. Enter in a name of the macro
+  7. Click the *Edit* button: Opening the OCLC Connexion Macro Editor and Debugger.
+  8. Use the mouse to select all the text
+  9. Paste in the text from the source copied
+  10. Click the *Check* icon in the toolbar
+  11. Click the *Save* icon in the toolbar
+
+After the macro is saved then it can be mapped to a user tool, key, or key
+chord as usual.
 
 ## Macros
 
