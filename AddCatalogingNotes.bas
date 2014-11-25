@@ -2,7 +2,7 @@
 'MacroDescription: Adds general RDA style cataloging notes to a record
 '
 ' Written by Sean Chen <schen@law.duke.edu>
-' Revised: November 7, 2014
+' Revised: November 25, 2014
 '****************************************************************************************
 
 Option Explicit
@@ -129,7 +129,7 @@ Sub Main
                 sCont = GetUpdatedFixedField("Cont", "b", sCont)
             Case 1 ' 504 Includes bibliographical references (pages <page-span>)
                 sNote = "504  Includes bibliographical references (pages <page-span>)."
-                sMatch = "(pages <page-span>)"
+                sMatch = "<page-span>"
                 sCont = GetUpdatedFixedField("Cont", "b", sCont)                
             Case 2 ' 504 Includes bibliographical references and index
                 sNote = "504  Includes bibliographical references and index."
@@ -139,7 +139,7 @@ Sub Main
                 End If
             Case 3 ' 504 Includes bibliographical references (pages <page-span>) and index
                 sNote = "504  Includes bibliographical references (pages <page-span>) and index."
-                sMatch = "(pages <page-span>)"
+                sMatch = "<page-span>"
                 sCont = GetUpdatedFixedField("Cont", "b", sCont)
                 If CS.SetFixedField("Indx", "1") = True Then
                     bUpdateIndx = True
