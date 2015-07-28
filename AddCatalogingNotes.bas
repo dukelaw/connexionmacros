@@ -61,7 +61,7 @@ Function SortString(sInputString$) As String
                     Mid(sInputString, i  + 1, 1) = sFirstChar
                 End If
               Next i
-            Loop 
+            Loop
         End If
     SortString = sInputString
     End If
@@ -122,7 +122,7 @@ Sub Main
         End If
 
         sYear = Mid$(Date$, 7, 4)
-        sMatch = "ü"               
+        sMatch = "ü"
         Select Case sDialog.ListBox1
             Case 0 ' 504 Includes bibliographical references.
                 sNote = "504  Includes bibliographical references."
@@ -130,7 +130,7 @@ Sub Main
             Case 1 ' 504 Includes bibliographical references (pages <page-span>)
                 sNote = "504  Includes bibliographical references (pages <page-span>)."
                 sMatch = "<page-span>"
-                sCont = GetUpdatedFixedField("Cont", "b", sCont)                
+                sCont = GetUpdatedFixedField("Cont", "b", sCont)
             Case 2 ' 504 Includes bibliographical references and index
                 sNote = "504  Includes bibliographical references and index."
                 sCont = GetUpdatedFixedField("Cont", "b", sCont)
@@ -174,7 +174,7 @@ Sub Main
                 sMatch = "<Provider>"
             Case 12 '588 Description based on print version record.
                 sNote = "588  Description based on print version record."
-                
+
         End Select
         If sCont <> "" and CS.SetFixedField("Cont", sCont) = True Then
             bUpdateCont = True
@@ -182,7 +182,7 @@ Sub Main
         If CS.AddField (99, sNote) = True Then
             CS.CursorColumn = 6
             CS.FindText sMatch, False
-        End If        
+        End If
 
     Else
         MsgBox "An bibliographic record must be displayed in order to use this macro", 0, "Add Cataloging Notes"

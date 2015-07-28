@@ -55,7 +55,7 @@ Sub Main
    CS.GetField "040", 1, s040
    If InStr(s040, "ßb eng ße rda") = False Then
        If InStr(s040, "ßb") Then
-           ' Fix 
+           ' Fix
            s040 = Left(s040, InStr(s040, "ßb") - 1) & Mid(s040, InStr(s040, "ßb") + 7)
        End If
        FixStr s040, "ßc", "ßb eng ße rda ßc", 0, 0
@@ -113,7 +113,7 @@ Sub Main
    If InStr(s300, "illustrations") And InStr(sIlls, "a") = 0 Then
        CS.SetFixedField "Ills", "a" & Mid(sIlls, 1, 3)
    End If
-   
+
    ' Transform 504
    CS.GetFixedField "Cont", sCont
    If CS.GetField("504", 1, s504) = True And InStr(s504, "(p. ") > 0 Then
@@ -137,10 +137,10 @@ Sub Main
 
    ' Fixed field for Indexes
 
-   
+
    'Insert 336, 337, 338'
    ' Can do this heuristically?
-   CS.GetFixedField "Type", sType 
+   CS.GetFixedField "Type", sType
    CS.GetFixedField "BLvl", sBLvl
    CS.GetFixedField "Form", sForm
    If sType = "a" And (sForm = "" Or (sForm = "r" Or sForm="d")) Then
@@ -153,7 +153,7 @@ Sub Main
        s336 = "336  text ß2 rdacontent"
        s337 = "337  computer ß2 rdamedia"
        s338 = "338  online resource ß2 rdacarrier"
-   Else       
+   Else
        s336 = "336  {UNABLE_TO_EXTRACT} ß2 rdacontent"
        s337 = "337  {UNABLE_TO_EXTRACT} ß2 rdamedia"
        s338 = "338  {UNABLE_TO_EXTRACT} ß2 rdacarrier"
@@ -161,5 +161,5 @@ Sub Main
    CS.AddField 1 , s336
    CS.AddField 1 , s337
    CS.AddField 1 , s338
-   
+
 End Sub
