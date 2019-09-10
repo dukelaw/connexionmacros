@@ -8,7 +8,7 @@ directly into your own local macrobook.
 
 ### Copy Macrobook
 To install copy the macro book (.mbk file) you want to install to the
-`C:\Program Files (x86)\OCLC\Connexion\Program\Macros`
+`C:\Users\[User Name]\AppData\Local\VirtualStore\Program Files (x86)\OCLC\Connexion\Program\Macros`
 
 Use the Tools > Macros > Manage (CTRL-ALT-SHIFT-G) to copy the macro to the
 whatever macro book you are using. Map the macro to a key or to a user tool
