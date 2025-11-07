@@ -47,9 +47,9 @@ Sub Main
    sLC = " https://search.catalog.loc.gov/browse/call-numbers?itemsPerPage=25&search="
    ' Duke example: https://find.library.duke.edu/?search_field=call_number&q=HGV6022.B6
    sDuke= " ""https://find.library.duke.edu/?search_field=call_number&q="
+   sClassWeb = " ""https://classweb.org/min/minaret?app=Class&mod=Search&table=schedules&table=tables&tid=1&menu=/Auto/&iname=span&ilabel=Class%20number&iterm="
 
-   sClassWeb = " ""https://classweb.org/min/minaret?app=Corr&mod=Search&menu=/Menu/&iname=l2nh&iterm="
-   sClassWebSuffix = "&ilabel=LC%20class%20%23%20--%3E%20LCSH%20(w%2Fnames)"
+   sClassWebSuffix = "&subtype=Schedules"
 
    nRow = CS.CursorRow
    If CS.ItemType = 0 or CS.ItemType = 1 or CS.ItemType = 2 or _
@@ -69,7 +69,7 @@ Sub Main
          FixStr sCallNumber, " ",  Chr(37) + "20", 0, 1
          sLC = sLC & sCallNumber & """"
          sDuke = sDuke & sClassNumber & """"
-         sClassWeb = sClassWeb & sCallNumber & sClassWebSuffix & """"
+         sClassWeb = sClassWeb & sClassNumber & sClassWebSuffix & """"
          Shell(sBrowser & sLC)
          Shell(sBrowser & sClassWeb)
          Shell(sBrowser & sDuke)
