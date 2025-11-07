@@ -55,7 +55,7 @@ Converts an existing record into a PCC RDA record using the following steps:
      * Other materials get an `{UNABLE_TO_EXTRACT}` stub.
   7. Update fixed fields to reflect:
      * Elvl: blankc
-     * Srce: 
+     * Srce:
 
 #### TODO
 
@@ -119,6 +119,15 @@ Add bibliographic record notes from a menu:
   * 500 Originally presented as the author's thesis (Habilation) (RDA 7.9.1.3)
   * 588 Title from cover (RDA 2.17.2)
   * 500 Revision of the author's \<Title of original work\> (Unstructured)
-  * 775 $i revision of: $a \<Title of original work\> 
+  * 775 $i revision of: $a \<Title of original work\>
   * 588 DBO online resource; title from PDF title page (\<Provider\>, viewed \<Today\>)'
   * 588 DBO print version record.
+
+### ClassSubjectCorrelation
+Helper macro to search a subject heading or call number in
+ClassWeb.org to locate correlations. Hard coded for Microsoft
+Edge Browsers.
+
+### SearchCallNumber
+Helper macro to search a call number or class number in a local
+catalog, LC Catalog, and ClassWeb.org
